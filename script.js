@@ -70,9 +70,9 @@ var circleThreshold   = logo.clientHeight;
 var insuranceLogos    = document.querySelector('.insurance-logos.front');
 var insuranceLogosShadows = document.querySelector('.insurance-logos.shadows');
 
-if (screenWidth() >= mediaBreakpoint) {
-  circleMaxDiameter += 50;
-}
+//if (screenWidth() >= mediaBreakpoint) {
+//  circleMaxDiameter += 50;
+//}
 
 var setDiameter = function(diameter) {
   diameter = parseInt(diameter);
