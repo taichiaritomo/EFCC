@@ -38,7 +38,8 @@ var toggleMenuMobile = function() {
 }
 
 var getMenuDesktopHeight = function() {
-  value = (220 - vertical_position/1.9);
+  vertical_position = getVerticalPosition();
+  value = (220 - vertical_position/1.2);
   if (value < 65) {
     value = 65;
   }
@@ -64,30 +65,13 @@ var topCircle         = document.querySelector('.top-circle');
 var circleMaxDiameter = document.querySelector('.circle').clientWidth;
 var logo              = document.querySelector('.logo');
 var header            = document.querySelector('.header');
+var headerShadow      = document.querySelector('.header-shadow');
 var circleThreshold   = logo.clientHeight;
+var insuranceLogos    = document.querySelector('.insurance-logos.front');
+var insuranceLogosShadows = document.querySelector('.insurance-logos.shadows');
 
-//var scaleElement = function (element, value) {
-//  if (value < 1.0) {
-//    value = 1;
-//  }
-//  topCircle.style.msTransform = "scale(" + value + "," + value + ")";
-//  topCircle.style.webkitTransform = "scale(" + value + "," + value + ")";
-//  topCircle.style.transform = "scale(" + value + "," + value + ")";
-//}
-
-//var getScaleElement = function (element) {
-//  var value;
-//  if (topCircle.style.transform) value = parseFloat(topCircle.style.transform.slice(6));
-//  if (topCircle.style.webkitTransform) value = parseFloat(topCircle.style.webkitTransform.slice(6));
-//  if (topCircle.style.msTransform) value = parseFloat(topCircle.style.msTransform.slice(6));
-//  return value;
-//}
-//var currentScale = getScaleElement(topCircle);
-
-//scaleElement(topCircle, topCircleMaxScale);
-
-if (screenWidth < mediaBreakpoint) {
-  circleMaxDiameter = (parseInt(circleMaxDiameter) - 200) + 'px';
+if (screenWidth() >= mediaBreakpoint) {
+  circleMaxDiameter += 50;
 }
 
 var setDiameter = function(diameter) {
@@ -101,11 +85,11 @@ var setDiameter = function(diameter) {
 
 var getDiameter = function() { return topCircle.clientHeight }
 
-setDiameter(circleMaxDiameter);
+setDiameter(circleMaxDiameter - getVerticalPosition()*2)
 
 window.onscroll = function (e) {
   vertical_position = getVerticalPosition();
-  setDiameter(circleMaxDiameter - vertical_position*1.5);
+  setDiameter(circleMaxDiameter - vertical_position*2.2);
   if (getDiameter() > circleThreshold) {
     logo.style.opacity = 0;
   } else if (getDiameter() == circleThreshold) {
@@ -117,6 +101,22 @@ window.onscroll = function (e) {
   if (!menuDesktopOpen) { // desktop menu
     menuDesktop.style.maxHeight = getMenuDesktopHeight() + 'px';
   }
-  header.style.top = -vertical_position/3 + 'px';
-  
+  if (verge.inViewport(header)) {
+    header.style.top = -vertical_position/2 + 'px';
+  }
+//  if (verge.inViewport(insuranceLogos)) {
+//    var offset = (screenWidth() >= mediaBreakpoint) ? 1450 : 1800;
+//    insuranceLogosShadows.style.top = (vertical_position - offset)/11 + 'px';
+//    insuranceLogos.style.top = (vertical_position - offset)/9 + 'px';
+//  }
+}
+
+/**************** CONTENT ADJUSTMENT ******************/
+
+var fillers = document.querySelectorAll('.filler')
+
+for (var i = 0, l = fillers.length; i < l; i++) {
+  var descriptionHeight = fillers[i].nextElementSibling.clientHeight;
+  console.log(descriptionHeight);
+  fillers[i].style.height = (430 - descriptionHeight) / 2 + 'px';
 }
