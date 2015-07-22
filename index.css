@@ -1,0 +1,209 @@
+h1 {
+  color: #FEFDFA;
+  font-weight: 600;
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.top-circle-wrapper {
+  left: 20px;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  top: 20px;
+  z-index: 10;
+}
+
+.top-circle {
+  background: #64D164;
+  height: 50px;
+  left: 50%;
+  position: relative;
+  top: 50%;
+  width: 50px;
+  
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  background: -moz-linear-gradient(-45deg, #64d164 0%, #64d164 50%, #abe2ab 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #64d164), color-stop(50%, #64d164), color-stop(100%, #abe2ab));
+  background: -webkit-linear-gradient(-45deg, #64d164 0%, #64d164 50%, #abe2ab 100%);
+  background: -o-linear-gradient(-45deg, #64d164 0%, #64d164 50%, #abe2ab 100%);
+  background: -ms-linear-gradient(-45deg, #64d164 0%, #64d164 50%, #abe2ab 100%);
+  background: linear-gradient(135deg, #64d164 0%, #64d164 50%, #abe2ab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64d164', endColorstr='#abe2ab', GradientType=1 );
+}
+
+.header {
+  position: absolute;
+  z-index: 40;
+}
+
+.logo {
+  opacity: 0;
+}
+
+.scroll {
+  background: url("scroll.svg");
+  bottom: 50px;
+  height: 16px;
+  left: 25%;
+  position: absolute;
+  width: 39px;
+  z-index: 40;
+}
+
+.description {
+  color: #333333;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+.circle {
+  border: 12px solid #FEFDFA;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+  z-index: 30;
+  width: 100%;
+  
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circle:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.insurance-logos {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.insurance-logos.front {
+  background: url("insurance/logoset.svg");
+  left: 0;
+  top: -10px;
+}
+
+.insurance-logos.shadows {
+  background: url("insurance/logoset-shadow.svg");
+  left: 5px;
+  top: -5px;
+}
+
+
+.end {
+}
+
+.map {
+  height: 550px;
+  position: relative;
+  left: 0;
+  margin: 0 -15px 0;
+  width: 100vw;
+}
+
+.end .row {
+  background: transparent;
+  margin: -550px auto 0;
+  max-width: 1024px;
+  padding: 0;
+}
+
+.end .col-sm-4 {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 290px;
+}
+
+.end .info {
+  background-color: #FEFDFA;
+  border: 2px solid #333333;
+  border-bottom: 4px solid #333333;
+  margin: 0 auto 0;
+  padding: 20px;
+  width: 290px;
+}
+
+.end .info h2 {
+  border: none;
+  padding: 0;
+}
+
+#nick {
+  height: 54px;
+  left: 75px;
+  position: relative;
+  top: -17px;
+  width: 140px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.250em;
+    line-height: 1.25em;
+    margin-left: 3%;
+    margin-top: 20px;
+  }
+  
+  .bulletin {
+    border-top: 4px solid #122BCE;
+  }
+  
+  main {
+    margin-top: 250px;
+  }
+  
+  main .row {
+    margin-bottom: 70px;
+  }
+  
+  .end .info {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.5em;
+    line-height: 1.25em;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  
+  main {
+    margin-top: 00px;
+  }
+  
+  main .row {
+    margin-bottom: 150px;
+  }
+  
+  .end .col-sm-4 {
+    margin-left: 20px;
+  }
+  
+  .end .info {
+    margin-top: 100px;
+  }
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Visit / Contact Us</title>
+
+  <!-- Stylesheets -->
+  <!-- Bootstrap grid & Responsive utilities -->
+  <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="subpages.css">
+  <!--  <link rel="stylesheet" href="fonts/fonts.css">-->
+
+  <!-- Script Packages -->
+  <!-- VelocityJS -->
+  <script src="velocity.min.js"></script>
+  <!-- VergeJS -->
+  <script src="verge.min.js"></script>
+
+  <!-- Fontkit (soleil font)-->
+  <script src="//use.typekit.net/lzl3cuz.js"></script>
+  <script> try { Typekit.load(); } catch (e) {} </script>
+  
+  <!-- Google Maps -->
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true">
+  </script>
+  <script type="text/javascript">
+    function initialize() {
+      var origin = new google.maps.LatLng(40.819935,-73.977059);
+      var mapOptions = {
+        center: { lat: 40.819935, lng: -73.977059},
+        zoom: 17
+      };
+      
+      var styles = [
+        {
+          "featureType": "poi",
+          "stylers": [
+            { "visibility": "off" }
+          ]
+        },{
+          "featureType": "transit",
+          "stylers": [
+            { "visibility": "off" }
+          ]
+        },{
+        }
+      ];
+      
+      var map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+      
+      map.setOptions({styles: styles});
+      
+      var marker = new google.maps.Marker({
+        position: origin,
+        map: map,
+        title: 'Edgewater Family Care'
+      });
+      
+      marker.addListener('click', function() { window.open("https://www.google.com/maps/place/Edgewater+Family+Care/@40.8200375,-73.9771488,17.23z/data=!4m2!3m1!1s0x89c2f64c1c0ffb4d:0x2033da58fb023bff");
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  
+</head>
+  
+<body>
+  <div class="tint"></div>
+
+  <nav class="menu hidden-xs">
+    <span style="font-weight: 600">Menu</span>
+    <br>
+    <br> <a href="doctors.html">Our Doctors</a>
+    <br> <a href="services.html">Treatments & Services</a>
+  <br> <span class="current">Visit / Contact Us</span>
+  </nav>
+
+  <button class="menu visible-xs">
+    <div class="close"></div>
+    <div class="menu-icon"></div>
+  </button>
+  <nav class="menu-mobile visible-xs">
+    <div class="list">
+      <a href="doctors.html">Our Doctors</a>
+      <br> <a href="services.html">Treatments & Services</a>
+      <br> <span class="current">Visit / Contact Us</span>
+    </div>
+  </nav>
+  
+  <header class="contact">
+    <div class="logo" onclick="location.href='index.html'"></div>
+    <div class="header">
+      <h1> We're <br> standing by.</h1>
+    </div>
+  </header>
+  
+  <div class="container-fluid">
+  <main>
+    
+    <div class="row">
+      <div class="col-sm-6">
+        
+        <div class="description">
+          <h2>Hours</h2>
+          <p>    Mon-Fri: 9AM - 5PM
+            <br> Sat: 9AM - 3PM
+          </p>
+        </div>
+        
+        <div class="description">
+          <h2>Contact</h2>
+          <p>    Phone: (201)-943-4040
+            <br> Fax: (201)-941-4599
+            <br> Email: <a href="mailto:info@edgewater-fcc.com">info@edgewater-fcc.com</a>
+          </p>
+          <button class="schedule" onclick="location.href='https://www.zocdoc.com/doctor/chika-kuwama-md-128802';">Make an appointment online</button>
+        </div>
+        
+      </div>
+      
+      <div class="col-sm-6">
+        <div class="description">
+          <h2>Visit</h2>
+          <p> Once you've set up an appointment, you can find us at: <br>
+            <br> <a href="https://www.google.com/maps/place/Edgewater+Family+Care/@40.8200375,-73.9771488,17.23z/data=!4m2!3m1!1s0x89c2f64c1c0ffb4d:0x2033da58fb023bff">725 River Road, Suite #202,
+              <br> Edgewater, NJ, 07020 </a> <br>
+            <br> in a building that looks like this ... <br>
+            <br> <img src="http://placehold.it/400x120" style="width: 100%"/>
+          </p>
+          <embed src="nick.svg" id="nick" type="image/svg+xml"/>
+        </div>
+    </div>  
+    </div>
+    
+    <div class="map" style="padding: 0">
+      <div id="map-canvas" style="height: 100%; width: 100%"></div>
+    </div>
+    
+  </main>
+  </div>
+  
+  <script src="services.js"></script>
+  
+</body>
+  
+</html>

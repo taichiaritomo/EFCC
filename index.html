@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <!-- CSS -->
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="index.css">
   <!--  <link rel="stylesheet" href="fonts/fonts.css">-->
 
   <!-- Script Packages -->
@@ -29,6 +30,57 @@
       Typekit.load();
     } catch (e) {}
   </script>
+  
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?v=3&signed_in=true">
+  </script>
+  <script type="text/javascript">
+    function initialize() {
+      var origin = new google.maps.LatLng(40.819935,-73.977059);
+      var centerLat, centerLng;
+      if (document.documentElement.clientWidth >= 768) {
+        centerLat = 40.820061;
+        centerLng = -73.979;
+      } else {
+        centerLat = 40.821;
+        centerLng = -73.97721360000003;
+      }
+      var mapOptions = {
+        center: { lat: centerLat, lng: centerLng},
+        zoom: 17
+      };
+      
+      var styles = [
+        {
+          "featureType": "poi",
+          "stylers": [
+            { "visibility": "off" }
+          ]
+        },{
+          "featureType": "transit",
+          "stylers": [
+            { "visibility": "off" }
+          ]
+        },{
+        }
+      ];
+      
+      var map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+      
+      map.setOptions({styles: styles});
+      
+      var marker = new google.maps.Marker({
+        position: origin,
+        map: map,
+        title: 'Edgewater Family Care'
+      });
+      
+      marker.addListener('click', function() { window.open("https://www.google.com/maps/place/Edgewater+Family+Care/@40.8200375,-73.9771488,17.23z/data=!4m2!3m1!1s0x89c2f64c1c0ffb4d:0x2033da58fb023bff");
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </head>
 
 
@@ -39,74 +91,65 @@
 
     <header>
       <div class="top-circle-wrapper">
-        <div class="top-circle"></div>
-        <div class="logo" onclick="location.href='index.html'"></div>
+        <div class="top-circle hidden-xs"></div> 
+        <div class="top-circle visible-xs"></div>
       </div>
+      <div class="logo" onclick="location.href='index.html'"></div>
       <div class="row">
-        <div class="header col-md-5">
-          <div class="header-front">
-                 We are
-            <br> Edgewater
-            <br> Family Care,
-            <br> a clinic for
+        <div class="header col-sm-9">
+          <h1>   Edgewater
+            <br> Family Care
+            <br> is a clinic for
             <br> everyone.
-          </div>
-          <div class="header-shadow" unselectable="on">
-                 We are
-            <br> Edgewater
-            <br> Family Care,
-            <br> a clinic for
-            <br> everyone.
-          </div>
+          </h1>
         </div>
-        <div class="bulletin-wrapper col-md-3">
-          <div class="hidden-xs hidden-sm" style="height: 170px;"></div>
+        <div class="scroll hidden-xs"></div>
 <!--
+        <div class="bulletin-wrapper col-sm-3">
+          <div class="hidden-xs hidden-sm" style="height: 170px;"></div>
           <div class="bulletin">
             Notice: We will be closed for the holidays from 01/01 - 12/31
           </div>
--->
         </div>
+-->
       </div>
     </header>
 
   </div>
 
-  <nav class="menu hidden-xs hidden-sm">
+  <nav class="menu hidden-xs">
     <span style="font-weight: 600">Menu</span>
     <br>
-    <br> Our Doctor
-    <br> Treatments & Services
-    <br> Visit/Contact Us
-    <br> Make an Appointment
+    <br> <a href="doctors.html">Our Doctors</a>
+    <br> <a href="services.html">Treatments & Services</a>
+    <br> <a href="contact.html">Visit / Contact Us</a>
   </nav>
 
-  <button class="menu hidden-md hidden-lg">
+  <button class="menu visible-xs">
     <div class="close"></div>
-    <div class="button-text">Menu</div>
+    <div class="menu-icon"></div>
   </button>
-  <nav class="menu-mobile hidden-md hidden-lg">
+  <nav class="menu-mobile visible-xs">
     <div class="list">
-      Our Doctor
-      <br> Treatments & Services
-      <br> Visit/Contact Us
-      <br> Make an Appointment
+      <a href="doctors.html">Our Doctors</a>
+      <br> <a href="services.html">Treatments & Services</a>
+      <br> <a href="contact.html">Visit / Contact Us</a>
     </div>
   </nav>
 
   <div class="container-fluid main">
-
     <main>
+      <div class="main-filler hidden-xs"></div>
       <section class="row">
-        <div class="col-md-6">
-          <div class="filler hidden-xs hidden-sm"></div>
+        <div class="col-sm-6">
+          <div class="filler hidden-xs"></div>
           <div class="description">
-            <h1>IN GOOD HANDS</h1>
+            <h2>In Good Hands</h2>
             <p>We’re a family clinic first, which means we know our stuff when it comes to primary care for all ages. Our staff have been practicing for over a hundred years.</p>
-            <h3>Meet the Doctor</h3>
+            <h3><a href="doctors.html">Meet the Doctors</a></h3>
           </div>
         </div>
-        <div class="circle-wrapper col-md-6">
+        <div class="circle-wrapper col-sm-6">
           <div class="circle" style="background-color: #F2AE64">
             <img src="doctor_kuwama.png" style="height: 100%; position: absolute; top: 0; width: 100%;"/>
           </div>
@@ -114,20 +157,20 @@
       </section>
 
       <section class="row">
-        <div class="circle-wrapper col-md-6 hidden-xs hidden-sm">
+        <div class="circle-wrapper col-sm-6 hidden-xs">
           <div class="circle" style="background-color: #E2E0E1">
             <img src="the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="filler hidden-xs hidden-sm"></div>
+        <div class="col-sm-6">
+          <div class="filler hidden-xs"></div>
           <div class="description">
-            <h1>SIMPLE CARE</h1>
+            <h2>Simple Care</h2>
             <p>From check-ups to common disease treatment, everyone in the family can get the care they need with the simplicity of a neighborhood clinic. And with our network of trusted special care physicians, you'll always know where to go next. </p>
-            <h3>See all our treatments & services.</h3>
+            <h3><a href="services.html">See all our treatments & services.</a></h3>
           </div>
         </div>
-        <div class="circle-wrapper col-md-6 hidden-md hidden-lg">
+        <div class="circle-wrapper col-sm-6 visible-xs">
           <div class="circle" style="background-color: #E2E0E1">
             <img src="the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>
           </div>
@@ -135,14 +178,14 @@
       </section>
 
       <section class="row">
-        <div class="col-md-6">
-          <div class="filler hidden-xs hidden-sm"></div>
+        <div class="col-sm-6">
+          <div class="filler hidden-xs"></div>
           <div class="description">
-            <h1>YOU'RE COVERED</h1>
+            <h2>You're Covered</h2>
             <p>We accept most major health insurance providers, plus some from overseas. If you're not covered yet, we can help you get started!</p>
           </div>
         </div>
-        <div class="circle-wrapper col-md-6">
+        <div class="circle-wrapper col-sm-6">
           <div class="circle" style="background-color: #97B7FC">
             <div class="insurance-logos shadows"></div>
             <div class="insurance-logos front"></div>
@@ -151,36 +194,31 @@
       </section>
 
     </main>
-
   </div>
-  <div class="container-fluid">
 
-    <section class="end">
+  <div class="container-fluid end">
+    <section>
+      <div class="map" style="padding: 0">
+        <div id="map-canvas" style="height: 100%; width: 100%"></div>
+      </div>
       <div class="row">
-        <div class="col-md-7 no-gutter">
-          <embed src="nick.svg" id="arrow" type="image/svg+xml" alt="arrow"/>
-          <div class="hidden-xs hidden-sm" style="height: 100px"></div>
-          <div class="description">
-            <h1>WE'LL BE HERE</h1>
-            <span class="info">
-              Call us at (201)-943-4040, or
-            </span>
+        <div class="col-sm-4">
+          <embed src="nick.svg" id="nick" type="image/svg+xml"/>
+          <div class="info">
+            <h2>We'll Be Here</h2>
+            <p><a href="https://www.google.com/maps/place/Edgewater+Family+Care/@40.8200375,-73.9771488,17.23z/data=!4m2!3m1!1s0x89c2f64c1c0ffb4d:0x2033da58fb023bff">725 River Road, Suite #202,
+              <br> Edgewater, NJ, 07020 </a></p>
+            <p> Call us at (201)-943-4040, or
+            </p>
               <button class="schedule">Make an appointment online</button>
-            <span class="info">
-              <br> 732 River Road, Suite #202,
-              <br> Edgewater, NJ, 07020
-            </span>
           </div>
-        </div>
-        <div class="map col-md-5 no-gutter" style="padding: 0">
-          <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=725%20River%20Road%2C%20Suite%20%23202%2C%20Edgewater%2C%20NJ%2C%20United%20States&key=AIzaSyAGk7ROqR33uHa6MS6Azc4keuPmfs_-1SI"></iframe>
         </div>
       </div>
     </section>
   </div>
 
 
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 
 </body>
 
