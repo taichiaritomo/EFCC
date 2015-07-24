@@ -92,6 +92,7 @@ document.addEventListener("mousemove", circleInflate, false);
 
 var topCircleMobile   = document.querySelector('.top-circle.visible-xs');
 var header            = document.querySelector('.header');
+var scroll            = document.querySelector('.scroll');
 var insuranceLogos    = document.querySelector('.insurance-logos.front');
 
 var setDiameter = function(vertical_position) {
@@ -116,8 +117,10 @@ setDiameter(getVerticalPosition());
 
 window.onscroll = function (e) {
   vertical_position = getVerticalPosition();
-  if (vertical_position < 600) {
+  if (vertical_position < 300) {
     header.style.top = -vertical_position*2 + 'px';
+    scroll.style.opacity = 1 - vertical_position/50;
+    scroll.style.bottom = vertical_position*1.3 + 50 + 'px';
   }
   setDiameter(vertical_position);
   if (getDiameter() > circleThreshold) {
@@ -137,7 +140,7 @@ window.onscroll = function (e) {
 
 var mainFiller = document.querySelector('.main-filler');
 console.log(document.documentElement.clientHeight);
-mainFiller.style.height = (document.documentElement.clientHeight - 350) + 'px';
+mainFiller.style.height = (document.documentElement.clientHeight - 450) + 'px';
 
 var fillers = document.querySelectorAll('.filler');
 

@@ -18,10 +18,10 @@ header.contact {
 }
 
 .header {
-  background: #FEFDFA;
-  bottom: 10px;
+  bottom: 20px;
+  left: 0;
   position: absolute;
-  width: 580px;
+  z-index: 40;
     
   animation: floatup 0.5s ease-in-out;
   -moz-animation: floatup 0.5s ease-in-out;
@@ -30,10 +30,11 @@ header.contact {
 }
 
 h1 {
-  color: #F0E9CE;
+  color: #FEFDFA;
   font-weight: 700;
-  margin: 0 10px 20px;
+  margin: 0;
   text-shadow: 0px 3px 0px rgba(225, 195, 135, 1);
+/*  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);*/
 }
 
 main {
@@ -51,7 +52,7 @@ main {
 }
 
 .profile {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .description {
@@ -61,7 +62,6 @@ main {
 }
 
 .profile {
-  background: #FEFDFA;
   margin-bottom: 70px;
   padding-top: 15px;
   top: 0px;
@@ -99,6 +99,7 @@ main {
 footer {
   background: #6FD86F;
   color: #FEFDFA;
+  font-weight: 300;
   padding: 30px;
   text-align: center;
   width: 100%;
@@ -113,9 +114,17 @@ footer {
 }
 
 @media (max-width: 767px) {
+  header {
+    height: 250px;
+  }
+  
   .header {
     left: 10%;
-    max-width: 275px;
+    width: 250px;
+  }
+  
+  header.contact {
+    height: 180px;
   }
   
   h1 {
@@ -126,8 +135,8 @@ footer {
 
 @media (min-width: 768px) { 
   .header {
-    left: 8%;
-    max-width: 510px;
+    left: 6%;
+    width: 510px;
   }
   
   h1 {
@@ -181,7 +190,7 @@ footer {
       bottom:0;
     }
     to {
-      bottom:10px;
+      bottom:20px;
     }
 }
 @-moz-keyframes floatup {
@@ -189,7 +198,7 @@ footer {
       bottom:0;
     }
     to {
-      bottom:10px;
+      bottom:20px;
     }
 }
 @-webkit-keyframes floatup {
@@ -197,14 +206,14 @@ footer {
       bottom:0;
     }
     to {
-      bottom:10px;
+      bottom:20px;
     }
 }
 @-o-keyframes floatup {
     from {
-      bottom:0;
+      bottom: 0px;
     }
     to {
-      bottom: 10px;
+      bottom: 20px;
     }
 }

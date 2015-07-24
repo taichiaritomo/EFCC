@@ -5,10 +5,10 @@
 }
 
 html, body {
-  background: #FEFDFA;
-  font-family: 'soleil', 'Avenir', sans-serif;
+  background: #F5F3F0;
+  font-family: 'europa', 'Avenir', sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -37,11 +37,10 @@ h3 {
 
 p {
   color: #666666;
-  font-weight: 300;
 }
 
 .current {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 a {
@@ -113,13 +112,13 @@ a:hover {
   padding: 10px 15px 10px;
   right: 20px;
   top: 20px;
-  width: 197px;
+  width: 200px;
 }
 
 /* MOBILE MENU */
 
 .menu.visible-xs {
-  background: #F2F2F2;
+  background: #FEFDFA;
   border: none;
   height: 110px;
   padding: 0 8px;
@@ -152,7 +151,7 @@ a:hover {
 }
 
 .menu-mobile {
-  background: #FEFDFA;
+  background: #F5F3F0;
   left: 0;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -169,11 +168,6 @@ a:hover {
   width: 200px;
 }
 
-
-.container-fluid.main {
-  max-width: 1024px;
-}
-
 .no-gutter > [class*='col-'] {
   padding-right:0;
   padding-left:0;
@@ -185,7 +179,7 @@ button.schedule {
   color: #FEFDFA;
   font-weight: 400;
   height: 45px;
-  width: 246px;
+  width: 234px;
 }
 
 button.schedule:hover {
@@ -196,10 +190,12 @@ button.schedule:hover {
 @media (max-width: 767px) { 
   h2 {
     padding: 0 0 15px 0;
+    text-align: center;
   }
   
   h3 {
     font-size: 1em;
+    text-align: center;
   }
 }
 

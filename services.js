@@ -66,7 +66,7 @@ var header            = document.querySelector('.header');
 window.onscroll = function (e) {
   vertical_position = getVerticalPosition();
   if (vertical_position < 300) {
-    header.style.bottom = 10 + vertical_position/5 + 'px';
+    header.style.bottom = 20 + vertical_position/5 + 'px';
   }
   if (menuMobileOpen) {
     toggleMenuMobile();
