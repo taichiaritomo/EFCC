@@ -99,7 +99,7 @@ var setDiameter = function(vertical_position) {
   if (screenWidth() >= mediaBreakpoint) {
     topCircleAdjust();
   } else {
-    var diameter = 420 - vertical_position*3;
+    var diameter = 420 - vertical_position*2.2;
     if (diameter < circleThreshold) {
       diameter = circleThreshold;
     }
