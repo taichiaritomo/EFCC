@@ -68,14 +68,23 @@ main {
 }
 
 .picture {
-  height: 250px;
   margin: 15px auto 0;
+  max-width: 250px;
   overflow: hidden;
-  width: 250px;
+  position: relative;
+  width: 100%;
   
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
+}
+
+.picture:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 #nick {

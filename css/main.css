@@ -66,7 +66,7 @@ a:hover {
 }
 
 .logo {
-  background: url(logo.svg);
+  background-image: url("../img/logo.svg");
   background-position: center center;
   background-repeat: no-repeat;
   height: 50px;
@@ -132,14 +132,14 @@ a:hover {
 }
 
 .close {
-  background-image: url(x.svg);
+  background: url("../img/x.svg");
   height: 50px;
   margin-top: -8px;
   width: 50px;
 }
 
 .menu-icon {
-  background-image: url(menu.svg);
+  background: url("../img/menu.svg");
   height: 50px;
   width: 50px;
 }
