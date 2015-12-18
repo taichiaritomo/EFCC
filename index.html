@@ -10,6 +10,7 @@
 
   <!-- Stylesheets -->
   <!-- Bootstrap grid & Responsive utilities -->
+<<<<<<< HEAD
   <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <!-- CSS -->
@@ -21,12 +22,36 @@
   <script src="velocity.min.js"></script>
 
   <!-- Fontkit (soleil font)-->
+=======
+  <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Script Packages -->
+  <!-- VelocityJS -->
+  <script src="js/velocity.min.js"></script>
+  <!-- VergeJS -->
+  <script src="js/verge.min.js"></script>
+
+  <!-- Fontkit (Europa font)-->
+>>>>>>> gh-pages
   <script src="//use.typekit.net/lzl3cuz.js"></script>
   <script>
     try {
       Typekit.load();
     } catch (e) {}
   </script>
+<<<<<<< HEAD
+=======
+  
+  <!-- Google Maps -->
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?v=3&signed_in=true">
+  </script>
+  <script type="text/javascript" src="js/maps.js"></script>
+>>>>>>> gh-pages
 </head>
 
 
@@ -37,6 +62,7 @@
 
     <header>
       <div class="top-circle-wrapper">
+<<<<<<< HEAD
         <div class="top-circle"></div>
         <div class="logo" onclick="location.href='index.html'"></div>
       </div>
@@ -51,11 +77,27 @@
             Notice: We will be closed for the holidays from 01/01 - 12/31
           </div>
         </div>
+=======
+        <div class="top-circle hidden-xs"></div> 
+        <div class="top-circle visible-xs"></div>
+      </div>
+      <div class="logo" onclick="location.href='index.html'"></div>
+      <div class="row">
+        <div class="header col-sm-9">
+          <h1>   Edgewater
+            <br> Family Care
+            <br> is a clinic for
+            <br> everyone.
+          </h1>
+        </div>
+        <div class="scroll hidden-xs"></div>
+>>>>>>> gh-pages
       </div>
     </header>
 
   </div>
 
+<<<<<<< HEAD
   <nav class="menu hidden-xs hidden-sm">
     <span style="font-weight: 600">Menu</span>
     <br>
@@ -75,10 +117,30 @@
       <br> Treatments & Services
       <br> Visit/Contact Us
       <br> Make an Appointment
+=======
+  <nav class="menu hidden-xs">
+    <span style="font-weight: 600">Menu</span>
+    <br>
+    <br> <a href="doctors.html">Our Doctors</a>
+    <br> <a href="services.html">Treatments & Services</a>
+    <br> <a href="contact.html">Visit / Contact Us</a>
+  </nav>
+
+  <button class="menu visible-xs">
+    <div class="close"></div>
+    <div class="menu-icon"></div>
+  </button>
+  <nav class="menu-mobile visible-xs">
+    <div class="list">
+      <a href="doctors.html">Our Doctors</a>
+      <br> <a href="services.html">Treatments & Services</a>
+      <br> <a href="contact.html">Visit / Contact Us</a>
+>>>>>>> gh-pages
     </div>
   </nav>
 
   <div class="container-fluid main">
+<<<<<<< HEAD
 
     <main>
       <section class="row">
@@ -122,10 +184,66 @@
         </div>
         <div class="circle-wrapper col-md-6">
           <div class="circle" style="background-color: #D7DAFD"></div>
+=======
+    <main>
+      <div class="main-filler hidden-xs" style="min-height: 100px"></div>
+      <section class="row">
+        <div class="col-sm-6">
+          <div class="filler hidden-xs"></div>
+          <div class="description">
+            <h2>In Good Hands</h2>
+            <p>We’re a family clinic first, which means we know our stuff when it comes to primary care for all ages. Our staff have been practicing for over a hundred years.</p>
+            <h3><a href="doctors.html">Meet the Doctors</a></h3>
+          </div>
+        </div>
+        <div class="circle-wrapper col-sm-6">
+          <div class="circle" style="background-color: #F2AE64; border: 12px solid #F5F3F0;">
+            <img src="img/doctor_kuwama.png" style="height: 100%; position: absolute; top: 0; width: 100%;"/>
+          </div>
+        </div>
+      </section>
+
+      <div class="row-wrapper">
+      <section class="row">
+        <div class="circle-wrapper col-sm-6 hidden-xs">
+          <div class="circle" style="background-color: #F5F3F0; border: 12px solid #FEFDFA;">
+            <img src="img/the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="filler hidden-xs"></div>
+          <div class="description">
+            <h2>Simple Care</h2>
+            <p>From check-ups to common disease treatment, everyone in the family can get the care they need with the simplicity of a neighborhood clinic. And with our network of trusted special care physicians, you'll always know where to go next. </p>
+            <h3><a href="services.html">See all our treatments & services.</a></h3>
+          </div>
+        </div>
+        <div class="circle-wrapper col-sm-6 visible-xs">
+          <div class="circle" style="background-color: #F5F3F0">
+            <img src="img/the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <section class="row">
+        <div class="col-sm-6">
+          <div class="filler hidden-xs"></div>
+          <div class="description">
+            <h2>You're Covered</h2>
+            <p>We accept most major health insurance providers, plus some from overseas. If you're not covered yet, we can help you get started!</p>
+          </div>
+        </div>
+        <div class="circle-wrapper col-sm-6">
+          <div class="circle" style="background-color: #C0CCF7; border: 12px solid #F5F3F0;">
+            <div id="insurance-logos"></div>
+          </div>
+>>>>>>> gh-pages
         </div>
       </section>
 
     </main>
+<<<<<<< HEAD
 
   </div>
   <div class="container-fluid">
@@ -149,12 +267,37 @@
         <div class="map col-md-5 no-gutter" style="padding: 0">
           <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=725%20River%20Road%2C%20Suite%20%23202%2C%20Edgewater%2C%20NJ%2C%20United%20States&key=AIzaSyAGk7ROqR33uHa6MS6Azc4keuPmfs_-1SI"></iframe>
         </div>
+=======
+  </div>
+
+  <div class="container-fluid end">
+    <section>
+      <div class="map" style="padding: 0">
+        <div id="map-canvas" style="height: 100%; width: 100%"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <embed src="img/nick.svg" id="nick" type="image/svg+xml"/>
+          <div class="info">
+            <h2>We'll Be Here</h2>
+            <p><a href="https://www.google.com/maps/place/Edgewater+Family+Care/@40.8200375,-73.9771488,17.23z/data=!4m2!3m1!1s0x89c2f64c1c0ffb4d:0x2033da58fb023bff">725 River Road, Suite #202,
+              <br> Edgewater, NJ, 07020 </a></p>
+            <p> Call us at (201)-943-4040, or
+            </p>
+              <button class="schedule" onclick="location.href='https://www.zocdoc.com/doctor/chika-kuwama-md-128802';">Make an appointment online</button>
+          </div>
+        </div>
+>>>>>>> gh-pages
       </div>
     </section>
   </div>
 
 
+<<<<<<< HEAD
   <script src="script.js"></script>
+=======
+  <script src="js/index.js"></script>
+>>>>>>> gh-pages
 
 </body>
 
