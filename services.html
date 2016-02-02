@@ -30,7 +30,8 @@
   
 <body>
   <header>
-    <div class="logo" onclick="location.href='index.html'"></div>
+    <div class="pattern"></div>
+    <div class="logo shadow" onclick="location.href='index.html'"></div>
     <div class="header">
       <h1>   We provide all the essential services and then some. </h1>
     </div>
@@ -58,7 +59,7 @@
     </div>
   </nav>
   
-  <div class="container-fluid">
+  <div class="container-fluid shadow" style="position: relative; z-index: 2;">
   <main>
     
     <div class="row">
@@ -106,7 +107,10 @@
   </div>
   
   <footer>
-    <a href="contact.html">Contact us for more information on services or to schedule an appointment.</a>
+    <div class="pattern"></div>
+    <div style="position: absolute; top: 0; left: 0; height: 80px; width: 100%; display: flex; justify-content: center;align-items: center;">
+      <a href="contact.html">Contact us for more information on services or to schedule an appointment.</a>
+    </div>
   </footer>
   
   <script src="js/services.js"></script>

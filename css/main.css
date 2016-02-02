@@ -6,6 +6,8 @@
 
 html, body {
   background: #F5F3F0;
+  background: url("../img/paperLight.png");
+  background-size: 200px 200px;
   font-family: 'europa', 'Avenir', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -31,8 +33,28 @@ h2 {
 }
 
 h3 {
+  position: relative;
   color: #122BCE;
   font-weight: 600;
+}
+
+h3 > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: #122BCE;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+h3 > a:hover:before {
+  visibility: visible;
+  opacity: 1;
 }
 
 p {
@@ -44,12 +66,26 @@ p {
 }
 
 a {
+  position: relative;
   color: inherit;
 }
 
 a:hover {
   color: #122BCE;
   text-decoration: none;
+}
+
+.pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../img/paperTransparent.png") repeat center;
+}
+
+.shadow {
+  box-shadow: 0 0 3px rgba(0,0,0,0.25);
 }
 
 .tint {
@@ -129,6 +165,8 @@ a:hover {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  
+  box-shadow: 0 0 2px rgba(0,0,0,0.25);
 }
 
 .close {
@@ -151,7 +189,8 @@ a:hover {
 }
 
 .menu-mobile {
-  background: #F5F3F0;
+/*  background: #F5F3F0;*/
+  background: url("../img/paperLight.png");
   left: 0;
   padding-top: 20px;
   padding-bottom: 20px;

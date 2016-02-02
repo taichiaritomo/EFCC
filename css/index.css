@@ -20,6 +20,7 @@ h1 {
   position: relative;
   top: 50%;
   width: 50px;
+  overflow: hidden;
   
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -38,6 +39,11 @@ h1 {
   background: -ms-linear-gradient(-45deg, #64d164 0%, #64d164 50%, #abe2ab 100%);
   background: linear-gradient(135deg, #64d164 0%, #64d164 50%, #abe2ab 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64d164', endColorstr='#abe2ab', GradientType=1 );
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+/*
+  -webkit-filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25));
+          filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25));
+*/
 }
 
 .header {
@@ -66,9 +72,26 @@ main .row {
 }
 
 main .row-wrapper {
-  background: #FEFDFA;
+  background: url("../img/paperWhite.png");
+  background-size: 200px 200px;
+  background-repeat: repeat;
   margin: 0 -15px;
   padding: 0 15px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 3;
+}
+
+main .row-wrapper2 {
+  margin: 0 -15px;
+  padding: 0 15px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  position: relative;
 }
 
 .description {
@@ -101,8 +124,27 @@ main .row-wrapper {
   padding-top: 100%;
 }
 
+.person {
+  -webkit-filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25));
+          filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25)); /* Same syntax as box-shadow */
+}
+
+.circle-inset-shadow {
+/*  background: white;*/
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
 #insurance-logos {
-  background-image: url("../img/logoset.png");
+  background-image: url("../img/logosetNoShadow.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100%;
@@ -110,6 +152,8 @@ main .row-wrapper {
   left: 0;
   top: -10px;
   width: 100%;
+  -webkit-filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25));
+        filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25)); /* Same syntax as box-shadow */
 }
 
 .map {
@@ -154,6 +198,8 @@ main .row-wrapper {
   position: relative;
   top: -17px;
   width: 140px;
+  -webkit-filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25));
+          filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.25));
 }
 
 @media (max-width: 767px) {

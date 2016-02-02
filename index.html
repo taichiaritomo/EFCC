@@ -45,8 +45,12 @@
 
     <header>
       <div class="top-circle-wrapper">
-        <div class="top-circle hidden-xs"></div> 
-        <div class="top-circle visible-xs"></div>
+        <div class="top-circle hidden-xs">
+          <div class="pattern"></div>
+        </div> 
+        <div class="top-circle visible-xs">
+          <div class="pattern"></div>
+        </div>
       </div>
       <div class="logo" onclick="location.href='index.html'"></div>
       <div class="row">
@@ -91,13 +95,14 @@
           <div class="filler hidden-xs"></div>
           <div class="description">
             <h2>In Good Hands</h2>
-            <p>We’re a family clinic first, which means we know our stuff when it comes to primary care for all ages. Our staff have been practicing for over a hundred years.</p>
+            <p>We’re a family clinic first, which means we know our stuff when it comes to primary care for all ages. Our staff have been practicing for over twenty years.</p>
             <h3><a href="doctors.html">Meet the Doctors</a></h3>
           </div>
         </div>
         <div class="circle-wrapper col-sm-6">
-          <div class="circle" style="background-color: #F2AE64; border: 12px solid #F5F3F0;">
-            <img src="img/doctor_kuwama.png" style="height: 100%; position: absolute; top: 0; width: 100%;"/>
+<!--          <div class="circle" style="background-color: #F2AE64; border: 12px solid #F5F3F0;">-->
+          <div class="circle" style="background: url('img/paperRose.png'); box-shadow: 0 0 5px rgba(0,0,0,0.25);">
+            <img src="img/doctor_kuwama-Paper.png" class="person" style="height: 100%; position: absolute; top: 0; width: 100%;"/>
           </div>
         </div>
       </section>
@@ -105,8 +110,12 @@
       <div class="row-wrapper">
       <section class="row">
         <div class="circle-wrapper col-sm-6 hidden-xs">
-          <div class="circle" style="background-color: #F5F3F0; border: 12px solid #FEFDFA;">
-            <img src="img/the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>
+          <div class="circle" style="background: url('img/paperLight.png');">
+            <img src="img/friend1.png" class="person" style="height: 100%; position: absolute; top: 0; left: -12px; width: auto;"/>
+            <img src="img/friend3.png" class="person" style="height: 100%; position: absolute; top: 0; right: -35px; margin-left: -25%; width: auto;"/>
+            <img src="img/friend2.png" class="person" style="height: 100%; position: absolute; top: 20px; left: 50%; margin-left: -25%; width: auto;"/>
+<!--            <img src="img/the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>-->
+            <div class="circle-inset-shadow"></div>
           </div>
         </div>
         <div class="col-sm-6">
@@ -118,14 +127,20 @@
           </div>
         </div>
         <div class="circle-wrapper col-sm-6 visible-xs">
-          <div class="circle" style="background-color: #F5F3F0">
-            <img src="img/the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>
+          <div class="circle" style="background: url('img/paperLight.png');">
+            
+            <img src="img/friend1.png" class="person" style="height: 100%; position: absolute; top: 0; left: -12px; width: auto;"/>
+            <img src="img/friend3.png" class="person" style="height: 100%; position: absolute; top: 0; right: -35px; margin-left: -25%; width: auto;"/>
+            <img src="img/friend2.png" class="person" style="height: 100%; position: absolute; top: 20px; left: 50%; margin-left: -25%; width: auto;"/>
+<!--            <img src="img/the_family.png" style="height: 100%; position: absolute; top: 0px; width: 100%;"/>-->
+            <div class="circle-inset-shadow"></div>
           </div>
         </div>
       </section>
       </div>
 
-      <section class="row">
+      <div class="row-wrapper2">
+      <section class="row" style="z-index: 2; background: url('img/paperLight.png');">
         <div class="col-sm-6">
           <div class="filler hidden-xs"></div>
           <div class="description">
@@ -134,11 +149,14 @@
           </div>
         </div>
         <div class="circle-wrapper col-sm-6">
-          <div class="circle" style="background-color: #C0CCF7; border: 12px solid #F5F3F0;">
+<!--          <div class="circle" style="background-color: #C0CCF7;">-->
+          <div class="circle" style="background: url('img/paperBlue.png');">
             <div id="insurance-logos"></div>
+            <div class="circle-inset-shadow"></div>
           </div>
         </div>
       </section>
+      </div>
 
     </main>
   </div>

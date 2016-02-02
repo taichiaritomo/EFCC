@@ -51,13 +51,14 @@
   </nav>
   
   <header>
-    <div class="logo" onclick="location.href='index.html'"></div>
+    <div class="pattern"></div>
+    <div class="logo shadow" onclick="location.href='index.html'"></div>
     <div class="header">
       <h1> Our doctors bring expert care to a family clinic. </h1>
     </div>
   </header>
   
-  <div class="container-fluid">
+  <div class="container-fluid shadow" style="position: relative; z-index: 2;">
   <main>
     
     <div class="row">
@@ -95,7 +96,10 @@
   </div>
   
   <footer>
-    <a href="contact.html">Contact us to schedule an appointment with one of our doctors.</a>
+    <div class="pattern"></div>
+    <div style="position: absolute; top: 0; left: 0; height: 80px; width: 100%; display: flex; justify-content: center;align-items: center;">
+      <a href="contact.html">Contact us to schedule an appointment with one of our doctors.</a>
+    </div>
   </footer>
   
   <script src="js/services.js"></script>
